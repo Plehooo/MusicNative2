@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header_gradient"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="60dp"
+            android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="IPTV Player" android:textSize="21sp"
+                    android:textStyle="bold" android:textColor="@color/text"/>
+                <TextView
+                    android:id="@+id/playlistLabel"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Memuat channel..." android:textSize="12sp"
+                    android:textColor="@color/muted"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/updateButton"
+                android:layout_width="40dp" android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center" android:textSize="18sp"
+                android:background="@drawable/bg_round_button"
+                android:text="🔄"/>
+
+            <TextView
+                android:id="@+id/settingsButton"
+                android:layout_width="40dp" android:layout_height="40dp"
+                android:gravity="center" android:textSize="18sp"
+                android:background="@drawable/bg_round_button"
+                android:text="⚙"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingHorizontal="12dp" android:paddingTop="4dp"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_search"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingHorizontal="14dp">
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🔍" android:textSize="14sp" android:layout_marginEnd="8dp"/>
+                <EditText
+                    android:id="@+id/searchInput"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:hint="Cari channel atau kategori"
+                    android:singleLine="true" android:textColor="@color/text"
+                    android:textColorHint="@color/muted" android:background="@android:color/transparent"
+                    android:textSize="14sp" android:paddingVertical="0dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/addPlaylistButton"
+                android:layout_width="40dp" android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center" android:textSize="20sp"
+                android:textColor="@color/text"
+                android:background="@drawable/bg_accent_button"
+                android:text="+"/>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:paddingTop="10dp">
+            <LinearLayout
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp">
+                <TextView android:id="@+id/homeButton" style="@style/NavTab" android:text="Semua"/>
+                <TextView android:id="@+id/favoritesButton" style="@style/NavTab" android:text="★ Favorit"/>
+                <TextView android:id="@+id/historyButton" style="@style/NavTab" android:text="Riwayat"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!-- Player -->
+    <FrameLayout
+        android:id="@+id/playerFrame"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/bg_player_card"
+        android:clipToOutline="true"
+        android:outlineProvider="background">
+
+        <androidx.media3.ui.PlayerView
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000"
+            app:show_buffering="when_playing"
+            app:use_controller="true"/>
+
+        <LinearLayout
+            android:id="@+id/liveBadge"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="top|start" android:layout_margin="10dp"
+            android:background="@drawable/bg_live_badge"
+            android:paddingHorizontal="8dp" android:paddingVertical="3dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:visibility="gone">
+            <View android:layout_width="6dp" android:layout_height="6dp"
+                android:background="#FFFFFF" android:layout_marginEnd="4dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="LIVE" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fullscreenButton"
+            android:layout_width="36dp" android:layout_height="36dp"
+            android:layout_gravity="top|end" android:layout_margin="8dp"
+            android:gravity="center" android:textSize="16sp" android:textColor="#FFFFFF"
+            android:background="@drawable/bg_round_button"
+            android:text="⛶"/>
+    </FrameLayout>
+
+    <!-- Now playing + status -->
+    <LinearLayout
+        android:id="@+id/nowPlayingBlock"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingHorizontal="16dp">
+        <TextView
+            android:id="@+id/nowPlaying"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Pilih channel untuk mulai menonton"
+            android:textColor="@color/text" android:textSize="16sp"
+            android:textStyle="bold" android:maxLines="1" android:ellipsize="end"/>
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingTop="2dp" android:paddingBottom="6dp"
+            android:text="Siap" android:textSize="12sp" android:textColor="@color/muted"/>
+    </LinearLayout>
+
+    <!-- Category chips -->
+    <HorizontalScrollView
+        android:id="@+id/categoryScroll"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/categoryChipContainer"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:paddingHorizontal="12dp" android:paddingBottom="8dp"/>
+    </HorizontalScrollView>
+
+    <View android:id="@+id/dividerLine" android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/line"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/channelList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="6dp"
+            android:paddingBottom="16dp"
+            android:clipToPadding="false"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

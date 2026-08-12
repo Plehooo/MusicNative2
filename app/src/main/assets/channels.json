@@ -1,0 +1,170 @@
+[
+  {
+    "id": "rtv",
+    "name": "RTV",
+    "group": "Hiburan",
+    "logo": "📺",
+    "url": "https://op-flashcon-digdayahd-1.dens.tv/h/h10/01.m3u8",
+    "featured": false
+  },
+  {
+    "id": "mdtv",
+    "name": "MDTV",
+    "group": "Hiburan",
+    "logo": "📡",
+    "url": "https://op-flashcon-digdayahd-1.dens.tv/h/h223/02.m3u8",
+    "featured": false
+  },
+  {
+    "id": "beritasatu",
+    "name": "beritasatu",
+    "group": "Berita",
+    "logo": "📺",
+    "url": "https://op-flashcon-digdayasd-1.dens.tv/h/h207/S2/mnf.m3u8",
+    "featured": false
+  },
+  {
+    "id": "nhk",
+    "name": "NHK World",
+    "group": "Berita",
+    "logo": "🌍",
+    "url": "https://op-flashcon-digdayahd-1.dens.tv/h/h18/02.m3u8",
+    "featured": false
+  },
+  {
+    "id": "channeljowo",
+    "name": "Channel Jowo",
+    "group": "Hiburan",
+    "logo": "🎭",
+    "url": "https://op-flashcon-digdayahd-1.dens.tv/h/h208/02.m3u8",
+    "featured": false
+  },
+  {
+    "id": "tvri",
+    "name": "TVRI",
+    "group": "Berita",
+    "logo": "🇮🇩",
+    "url": "https://op-flashcon-digdayahd-1.dens.tv/h/h17/02.m3u8",
+    "featured": false
+  },
+  {
+    "id": "rodja",
+    "name": "Rodja TV",
+    "group": "Islami",
+    "logo": "🕌",
+    "url": "https://rodjatv.com/rodjatv/live.m3u8",
+    "featured": false
+  },
+  {
+    "id": "ahsan",
+    "name": "Ahsan TV",
+    "group": "Islami",
+    "logo": "☪️",
+    "url": "https://5bf7b725107e5.streamlock.net/ahsantv/ahsantv/playlist.m3u8",
+    "featured": false
+  },
+  {
+    "id": "metro",
+    "name": "Metro TV",
+    "group": "Berita",
+    "logo": "📰",
+    "url": "https://op-flashcon-digdayahd-1.dens.tv/h/h12/02.m3u8",
+    "featured": false
+  },
+  {
+    "id": "makkah",
+    "name": "Makkah Live",
+    "group": "Islami",
+    "logo": "🕋",
+    "url": "https://op-flashcon-digdayahd-1.dens.tv/h/h15/02.m3u8",
+    "featured": false
+  },
+  {
+    "id": "tvone",
+    "name": "tvOne",
+    "group": "Berita",
+    "logo": "📡",
+    "url": "https://op-flashcon-digdayahd-1.dens.tv/h/h40/02.m3u8",
+    "featured": false
+  },
+  {
+    "id": "kompas",
+    "name": "Kompas",
+    "group": "Berita",
+    "logo": "📰",
+    "url": "https://op-flashcon-digdayahd-1.dens.tv/h/h234/02.m3u8",
+    "featured": false
+  },
+  {
+    "id": "sctv",
+    "name": "SCTV",
+    "group": "Hiburan",
+    "logo": "📺",
+    "url": "https://cdnbal1.indihometv.com/atm/DASH/sctv/sctv-avc1_2500000=7-3277707030000000.mpd",
+    "featured": false
+  },
+  {
+    "id": "Magna",
+    "name": "MAGNA",
+    "group": "Hiburan",
+    "logo": "📺",
+    "url": "https://op-flashcon-digdayahd-1.dens.tv/h/h24/02.m3u8",
+    "featured": false
+  },
+  {
+    "id": "mnctv",
+    "name": "MNCTV",
+    "group": "Hiburan",
+    "logo": "📺",
+    "url": "https://cdnbal1.indihometv.com/atm/DASH/mnctv/mnctv-avc1_2500000=7-3277707030000000.mpd",
+    "featured": false
+  },
+  {
+    "id": "rcti",
+    "name": "RCTI",
+    "group": "Hiburan",
+    "logo": "📺",
+    "url": "https://cdnbal1.indihometv.com/atm/DASH/rcti/rcti-avc1_2500000=7-3277707030000000.mpd",
+    "featured": false
+  },
+  {
+    "id": "kidstv",
+    "name": "Kids TV (CA)",
+    "group": "Anak",
+    "logo": "🧸",
+    "url": "https://jansonmedia-kidstv-1-ca.lg.wurl.tv/playlist.m3u8",
+    "featured": false
+  },
+  {
+    "id": "moji",
+    "name": "Moji",
+    "group": "Hiburan",
+    "logo": "📺",
+    "url": "https://op-flashcon-digdayahd-1.dens.tv/h/h207/index.m3u8",
+    "featured": false
+  },
+  {
+    "id": "gtv",
+    "name": "GTV",
+    "group": "Hiburan",
+    "logo": "📺",
+    "url": "https://cdnbal1.indihometv.com/atm/DASH/globaltv/globaltv-avc1_2500000=7-3277707030000000.mpd",
+    "featured": false
+  },
+  {
+    "id": "realmadridtv",
+    "name": "Real Madrid TV",
+    "group": "Sport",
+    "logo": "⚪",
+    "url": "https://rmtv.akamaized.net/hls/live/2043154/rmtv-en-web/master.m3u8",
+    "featured": true
+  },
+  {
+    "id": "kartunluar",
+    "name": "Kartun Luar",
+    "group": "Anak",
+    "logo": "🦸",
+    "url": "https://hls-harbor-livepush.akamaized.net/live_cdn/nsqIStpj8PaG-Ev/emcQJ0pGpremocy/index.mpd",
+    "featured": false
+  }
+]
