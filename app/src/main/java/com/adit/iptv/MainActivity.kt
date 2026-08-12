@@ -125,7 +125,15 @@ class MainActivity : AppCompatActivity() {
             .setAllowCrossProtocolRedirects(true)
             .setConnectTimeoutMs(15000)
             .setReadTimeoutMs(20000)
-            .setUserAgent("IPTVPlayer/2.0 (Android)")
+            .setUserAgent(
+                "Mozilla/5.0 (Linux; Android 14; Mobile) AppleWebKit/537.36 " +
+                "(KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36 ExoPlayerLib/1.10.1"
+            )
+            .setDefaultRequestProperties(
+                mapOf(
+                    "Icy-MetaData" to "1"
+                )
+            )
 
         player = ExoPlayer.Builder(this)
             .setMediaSourceFactory(DefaultMediaSourceFactory(this).setDataSourceFactory(http))
